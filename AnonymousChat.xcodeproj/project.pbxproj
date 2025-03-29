@@ -14,7 +14,7 @@
 		56CC8D512D98800C005A8864 /* Exceptions for "AnonymousChat" folder in "AnonymousChat" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Supporting/Info.plist,
 			);
 			target = 56CC8D3E2D98800B005A8864 /* AnonymousChat */;
 		};
@@ -145,8 +145,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TPZ6UXU3V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnonymousChat/Info.plist;
+				INFOPLIST_FILE = AnonymousChat/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -172,8 +173,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TPZ6UXU3V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnonymousChat/Info.plist;
+				INFOPLIST_FILE = AnonymousChat/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
