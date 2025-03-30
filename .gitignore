@@ -94,4 +94,17 @@ fastlane/test_output
 
 iOSInjectionProject/
 
+# Firebase config file
+GoogleService-Info.plist
+
+# APNs Auth Key
+AuthKey_*.p8
+
+# Apple Certificates
+*.cer
+*.p12
+*.pem
+*.mobileprovision
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,firebase
+

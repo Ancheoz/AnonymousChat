@@ -1,5 +1,5 @@
 //
-//  ChatView.swift
+//  FeedView.swift
 //  AnonymousChat
 //
 //  Created by Oleksandr Prytchyn on 30.03.2025.
@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct ChatView: View {
+struct FeedView: View {
     var body: some View {
-        VStack {
-            Text("ChatView")
-        }
+        Text("Feed view")
     }
 }

@@ -9,21 +9,28 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var model: ViewModel
+    @EnvironmentObject var auth: AuthViewModel
+    
     var body: some View {
         VStack {
+            Text("Your phone number: \(auth.phoneNumber)")
+            Button("Change") {
+                // ACTION TO CHANGE
+            }
+            .buttonStyle(.borderedProminent)
+            .padding()
+            .cornerRadius(16)
             Button {
-                 model.auth.logOut()
+                 auth.logOut()
                 dismiss()
             } label: {
                 Text("Log out")
                 
             }
-            .buttonBorderShape(.circle)
+            .buttonStyle(.borderedProminent)
             .padding()
-            .background(Color.gray)
             .cornerRadius(16)
-
         }
+        
     }
 }
