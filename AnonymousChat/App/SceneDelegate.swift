@@ -9,34 +9,18 @@ import UIKit
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
     var window: UIWindow?
-    
     let viewModel = ViewModel()
-    
     
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
-               options connectionOptions: UIScene.ConnectionOptions) {
-        
+               options connectionOptions: UIScene.ConnectionOptions)
+    {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        setupRootUI(in: windowScene)
         
-        
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UIHostingController(rootView:
-                                                            NavigationStack {
-            Group {
-                RootView()
-                    .environmentObject(viewModel)
-                    .environmentObject(viewModel.auth)
-                    .environmentObject(viewModel.chat)
-            }
-        }
-        )
-        
-        self.window = window
-        window.makeKeyAndVisible()
+        NotificationManager.shared.configureNotifications()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -59,6 +43,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print(#function)
     }
     
-    
+    func setupRootUI(in windowScene: UIWindowScene) {
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = UIHostingController(rootView:
+                                                            NavigationStack {
+            RootView()
+                .environmentObject(viewModel)
+                .environmentObject(viewModel.auth)
+                .environmentObject(viewModel.chat)
+        })
+        self.window = window
+        window.makeKeyAndVisible()
+    }
 }
+
 

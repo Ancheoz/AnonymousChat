@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		568085042D99AB030057EFFF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 568085032D99AB030057EFFF /* FirebaseAuth */; };
+		568085062D99AB030057EFFF /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 568085052D99AB030057EFFF /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		56CC8D3F2D98800B005A8864 /* AnonymousChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnonymousChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568085062D99AB030057EFFF /* FirebaseCore in Frameworks */,
+				568085042D99AB030057EFFF /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +84,6 @@
 				56CC8D412D98800B005A8864 /* AnonymousChat */,
 			);
 			name = AnonymousChat;
-			packageProductDependencies = (
-			);
 			productName = AnonymousChat;
 			productReference = 56CC8D3F2D98800B005A8864 /* AnonymousChat.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +112,9 @@
 			);
 			mainGroup = 56CC8D362D98800B005A8864;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				568085022D99AB030057EFFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 56CC8D402D98800B005A8864 /* Products */;
 			projectDirPath = "";
@@ -143,6 +151,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AnonymousChat/AnonymousChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5TPZ6UXU3V;
@@ -170,6 +179,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AnonymousChat/AnonymousChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5TPZ6UXU3V;
@@ -333,6 +343,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		568085022D99AB030057EFFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		568085032D99AB030057EFFF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 568085022D99AB030057EFFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		568085052D99AB030057EFFF /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 568085022D99AB030057EFFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56CC8D372D98800B005A8864 /* Project object */;
 }

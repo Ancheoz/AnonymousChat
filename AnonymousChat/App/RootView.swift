@@ -19,20 +19,20 @@ struct RootView: View {
     
     @ViewBuilder
     var body: some View {
-            Group {
-                switch auth.authState {
-                case .enterPhone:
-                    PhoneNumberView()
-                        .environmentObject(auth)
-                case .enterCode:
-                    CodeAuthView()
-                        .environmentObject(auth)
-                case .loggedIn:
-                    ChatView()
-                        .environmentObject(auth)
-                }
+        Group {
+            switch auth.authState {
+            case .enterPhone:
+                PhoneNumberView()
+                    .environmentObject(auth)
+            case .enterCode:
+                CodeAuthView()
+                    .environmentObject(auth)
+            case .loggedIn:
+                MainTabView()
+                    .environmentObject(auth)
             }
         }
     }
+}
 
 
